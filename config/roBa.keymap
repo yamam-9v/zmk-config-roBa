@@ -83,6 +83,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        magnifier: magnifier {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MAGNIFIER";
+            bindings = <&kp LG(KP_PLUS)>, <&kp LG(KP_MINUS)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -91,7 +100,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp A             &kp S         &kp D         &kp F                        &kp G        &magnifier                         &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp GRAVE                          &kp SQT        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANG_HANJA  &lt 2 SPACE  &lt_to_layer_0 3 LANG_HANGEUL      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
