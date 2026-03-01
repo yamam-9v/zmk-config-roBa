@@ -23,6 +23,18 @@
     //     wait-ms = <5>;
     //     tap-ms = <5>;
     // };
+
+    taskview {
+        layers = <7>;
+        bindings = 
+            <&kp TAB>,
+            <&kp LS(TAB)>,
+            <&kp LEFT_GUI>,
+            <&kp LG(D)>;
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
 };
 
 / {
