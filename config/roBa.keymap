@@ -77,6 +77,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        to_layer_taskview: to_layer_taskview {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 7 &kt LEFT_ALT>;
+            label = "TO_LAYER_TASKVIEW";
+        };
     };
 
     behaviors {
@@ -162,10 +169,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans                  &trans  &trans  &trans                   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LC(LEFT_ARROW))  &trans  &trans  &kp LG(LC(RIGHT_ARROW))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                  &trans  &trans  &trans                   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                           &trans
+&trans  &trans  &trans  &trans  &trans                      &trans                  &trans              &trans  &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LC(LEFT_ARROW))  &trans              &trans  &kp LG(LC(RIGHT_ARROW))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                  &to_layer_taskview  &trans  &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                       &trans
             >;
         };
 
